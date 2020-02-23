@@ -28,4 +28,9 @@ class FlutterPluginKotlin {
     await _channel.invokeMethod('showAlertDialog');
   }
 
+  static Future<String> get getScreenSize async {
+    final String screenSize = await _channel.invokeMethod('screenSize');
+    return screenSize;
+  }
+
 }
